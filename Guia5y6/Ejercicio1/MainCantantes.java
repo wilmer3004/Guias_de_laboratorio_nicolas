@@ -122,10 +122,6 @@ public class MainCantantes {
         }
     }
 
-    // ════════════════════════════════════════════════
-    // UI BONITA
-    // ════════════════════════════════════════════════
-
     private static void mostrarTitulo(String titulo) {
         System.out.println("\n" + LINE);
         System.out.printf("  %-66s%n", titulo);
