@@ -1,4 +1,4 @@
-package Ejercicio4;
+
 
 class Cola<T> {
     private Nodo<T> frente;
@@ -11,12 +11,12 @@ class Cola<T> {
         tamaño = 0;
     }
 
-    // 🔹 Verificar si está vacía
+    // Verificar si está vacía
     public boolean estaVacia() {
         return frente == null;
     }
 
-    // 🔹 Encolar (insertar)
+    // Encolar (insertar)
     public void encolar(T dato) {
         Nodo<T> nuevo = new Nodo<>(dato);
 
@@ -30,7 +30,7 @@ class Cola<T> {
         tamaño++;
     }
 
-    // 🔹 Desencolar (eliminar)
+    // Desencolar (eliminar)
     public T desencolar() {
         if (estaVacia()) return null;
 
@@ -45,24 +45,24 @@ class Cola<T> {
         return dato;
     }
 
-    // 🔹 Ver frente
+    // Ver frente
     public T frente() {
         return estaVacia() ? null : frente.dato;
     }
 
-    // 🔹 Tamaño
+    // Tamaño
     public int tamaño() {
         return tamaño;
     }
 
-    // 🔹 Vaciar cola
+    // Vaciar cola
     public void vaciar() {
         frente = null;
         fin = null;
         tamaño = 0;
     }
 
-    // 🔹 Buscar elemento
+    // Buscar elemento
     public boolean buscar(T valor) {
         Nodo<T> temp = frente;
         while (temp != null) {
@@ -72,7 +72,7 @@ class Cola<T> {
         return false;
     }
 
-    // 🔹 Mostrar cola
+    // Mostrar cola
     public void mostrar() {
         if (estaVacia()) {
             System.out.println("Cola vacía");

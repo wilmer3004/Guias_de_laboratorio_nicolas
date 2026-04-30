@@ -114,7 +114,7 @@ class ListaCircular {
         return false;
     }
 
-    // 🔥 ORDENAR LISTA (Burbuja)
+    //  ORDENAR LISTA (Burbuja)
     public void ordenar() {
         if (estaVacia() || cabeza.siguiente == cabeza) return;
 

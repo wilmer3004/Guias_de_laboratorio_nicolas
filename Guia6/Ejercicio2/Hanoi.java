@@ -47,7 +47,7 @@ class Hanoi {
         System.out.println("\n✅ Resuelto en " + movimientos + " movimientos");
     }
 
-    // 🔥 Visualización en consola
+    //  Visualización en consola
     public void mostrarTorres() {
         System.out.println("A\tB\tC");
 

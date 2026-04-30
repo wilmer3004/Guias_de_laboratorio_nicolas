@@ -25,7 +25,7 @@ class Expresion {
                (a == '{' && b == '}');
     }
 
-    // 🔹 Prioridad de operadores
+    // Prioridad de operadores
     private static int prioridad(char op) {
         switch (op) {
             case '+':
@@ -37,7 +37,7 @@ class Expresion {
         return 0;
     }
 
-    // 🔹 Infija → Postfija
+    // Infija → Postfija
     public static String infijaAPostfija(String exp) {
         Pila<Character> pila = new Pila<>();
         StringBuilder salida = new StringBuilder();
@@ -90,7 +90,7 @@ class Expresion {
         return c == '(' || c == '[' || c == '{';
     }
 
-    // 🔹 Evaluar Postfija
+    // Evaluar Postfija
     public static double evaluarPostfija(String post) {
         Pila<Double> pila = new Pila<>();
         String[] tokens = post.split(" ");
