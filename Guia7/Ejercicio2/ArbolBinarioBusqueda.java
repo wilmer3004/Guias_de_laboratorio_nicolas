@@ -1,16 +1,17 @@
+
 public class ArbolBinarioBusqueda {
 
-    Nodo raiz;
+    NodoArbol raiz;
 
     // INSERTAR
     public void insertar(int dato) {
         raiz = insertarRecursivo(raiz, dato);
     }
 
-    private Nodo insertarRecursivo(Nodo actual, int dato) {
+    private NodoArbol insertarRecursivo(NodoArbol actual, int dato) {
 
         if (actual == null) {
-            return new Nodo(dato);
+            return new NodoArbol(dato);
         }
 
         if (dato < actual.dato) {
@@ -27,7 +28,7 @@ public class ArbolBinarioBusqueda {
         return buscarRecursivo(raiz, dato);
     }
 
-    private boolean buscarRecursivo(Nodo actual, int dato) {
+    private boolean buscarRecursivo(NodoArbol actual, int dato) {
 
         if (actual == null) {
             return false;
@@ -45,7 +46,7 @@ public class ArbolBinarioBusqueda {
     }
 
     // RECORRIDO INORDEN
-    public void inOrden(Nodo nodo) {
+    public void inOrden(NodoArbol nodo) {
 
         if (nodo != null) {
 
@@ -58,7 +59,7 @@ public class ArbolBinarioBusqueda {
     }
 
     // RECORRIDO PREORDEN
-    public void preOrden(Nodo nodo) {
+    public void preOrden(NodoArbol nodo) {
 
         if (nodo != null) {
 
@@ -71,7 +72,7 @@ public class ArbolBinarioBusqueda {
     }
 
     // RECORRIDO POSTORDEN
-    public void postOrden(Nodo nodo) {
+    public void postOrden(NodoArbol nodo) {
 
         if (nodo != null) {
 
@@ -88,7 +89,7 @@ public class ArbolBinarioBusqueda {
         raiz = eliminarRecursivo(raiz, dato);
     }
 
-    private Nodo eliminarRecursivo(Nodo actual, int dato) {
+    private NodoArbol eliminarRecursivo(NodoArbol actual, int dato) {
 
         if (actual == null) {
             return null;
@@ -130,7 +131,7 @@ public class ArbolBinarioBusqueda {
     }
 
     // ENCONTRAR MENOR
-    private int encontrarMenor(Nodo nodo) {
+    private int encontrarMenor(NodoArbol nodo) {
 
         int menor = nodo.dato;
 
@@ -143,7 +144,7 @@ public class ArbolBinarioBusqueda {
     }
 
     // VERIFICAR SI EL ÁRBOL ES LLENO
-    public boolean esLleno(Nodo nodo) {
+    public boolean esLleno(NodoArbol nodo) {
 
         if (nodo == null) {
             return true;
